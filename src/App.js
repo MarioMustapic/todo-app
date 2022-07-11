@@ -1,4 +1,4 @@
-import { ItemForm } from "./components/ItemForm/ItemForm";
+import { ItemForm } from "./components/ItemForm/ItemForm.component";
 
 function App() {
   return (
