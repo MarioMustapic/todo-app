@@ -2,7 +2,7 @@
 
 ## Features
 
-- [ ] Add a item
-- [ ] List all items
-- [ ] Remove item
-- [ ] Mark a item as done
+- [x] Add an item
+- [x] List all items
+- [ ] Remove an item
+- [ ] Mark an item as done
