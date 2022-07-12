@@ -4,7 +4,6 @@ import { ItemsContext } from "../../contexts/ItemsContext";
 export function ItemList() {
   const context = useContext(ItemsContext);
   const [queryState, setQueryState] = useState({});
-
   const updateQuery = (event) => {
     let value = null;
 
@@ -35,19 +34,27 @@ export function ItemList() {
     </div>
   ));
 
+  const countAll = 0;
+  const countCompleted = 0;
+  const countOpen = 0;
+
+
   return (
     <div>
       <div>
         <button onClick={updateQuery} name="completed" value="">
-          All items
+          All items ({countAll})
         </button>
         <button onClick={updateQuery} name="completed" value="true">
-          Completed items
+          Completed items ({countCompleted})
         </button>
         <button onClick={updateQuery} name="completed" value="false">
-          Open items
+          Open items ({countOpen})
         </button>
       </div>
+      {queryState.completed === null && <div>All items</div>}
+      {queryState.completed && <div>Completed items</div>}
+      {queryState.completed === false && <div>Open items</div>}
       <div>
         {itemElements}
       </div>
